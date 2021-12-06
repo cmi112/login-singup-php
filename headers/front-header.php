@@ -26,33 +26,11 @@
 	<div class="collapse navbar-collapse" id="navbarNav">
 	<ul class="navbar-nav">
 	<li class="nav-item">
-	<a class="nav-link" href="index.php?name=calculator">Calculator</a>
+	<a class="nav-link" href="register.php">Register</a>
 	</li>
 	<li class="nav-item">
-	<a class="nav-link" href="index.php?name=evenOdd">Even And Odd Numbers</a>
+	<a class="nav-link" href="index.php">Login</a>
 	</li>
-	<li class="nav-item">
-	<a class="nav-link" href="index.php?name=contactForm">Contact Form</a>
-	</li>
-    <li class="nav-item">
-	<a class="nav-link" href="index.php?name=mail">Email</a>
-	</li>
-	<li class="nav-item">
-	<a class="nav-link" href="index.php?name=todo">To do</a>
-	</li>
-	<li class="nav-item">
-	<a class="nav-link" href="index.php?name=location">Location</a>
-	</li>
-	<li class="nav-item">
-	<a class="nav-link" href="index.php?name=posts">Posts</a>
-	</li>
-	<li class="nav-item">
-	<a class="nav-link" href="index.php?name=recipes">Recipes</a>
-	</li>
-	<li class="nav-item">
-	<a class="nav-link" href="index.php?name=data">Data</a>
-	</li>
-	
 	</ul>
 	</div>
 	</div>

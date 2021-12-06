@@ -1,6 +1,6 @@
 <?php
 require_once 'connection.php';
-include("header.php");
+include("./headers/front-header.php");
 session_start();
 if(isset($_SESSION['user'])){
     header("location: welcome.php");
@@ -48,7 +48,13 @@ if(isset($_REQUEST['login_btn'])){
     }
 }
 ?>
+
+<div class="hero-section text-center">
+<h1>Welcome to my PHP Mini Projects</h1>
+</div>
 	<div class="container">
+
+ 
     <?php
     if( isset($_REQUEST['msg']) ){
         echo "<p class='alert alert-warning'>".$_REQUEST['msg']."</p>";
@@ -77,9 +83,16 @@ if(isset($_REQUEST['login_btn'])){
 
 
     <div class="container">
+
+</div>
+
+
 <?php
 include("footer.php")
 
 ?>
 
-</div>
+
+
+
+

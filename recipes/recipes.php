@@ -16,7 +16,7 @@ if(!$db)
 
 if(isset($_POST["submit"]))
 {
-  $target="recipes/images/".basename($_FILES['image']['name']);
+  $target="./recipes/images/".basename($_FILES['image']['name']);
   // Get all the subitted data from the form
   $title=$_POST['title'];
   $content=$_POST['content'];
@@ -50,7 +50,7 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
 <!-- Hero Section End -->
 <!-- Add Recipes Section start -->
 <div class="container">
-<form action="index.php?name=recipes" method="post" enctype="multipart/form-data">
+<form action="welcome.php?name=recipes" method="post" enctype="multipart/form-data">
 <div class="mb-3">
 <label for="exampleFormControlInput1" class="form-label">Add Recipes: </label>
 <input type="text" class="form-control" name="title" id="exampleFormControlInput1" >
@@ -86,10 +86,19 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
 
                 <div class="col col-6 col-md-4 py-md-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="recipes/images/<?php echo $data['image']; ?>" class="card-img-top" alt="...">
+                        <img src="./recipes/images/<?php echo $data['image']; ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Recipe Name : <?php echo $data['title']; ?></h5>
-                            <p class="card-text"><?php echo $data['content']; ?></p>
+                            <p class="card-text"><?php $string=strip_tags($data['content']);
+                        if(strlen($string)>100):
+                            $stringCut=substr($string,0,100);
+                            $endPoint=strrpos($stringCut,'');
+                            $string=$endPoint?substr($stringCut,0,$endPoint):substr($stringCut,0);
+                            $string.='...<a href="./recipes/recipe.php?id=' . $data["id"] . '">Read more</a>';
+                        endif;
+                        echo $string;
+                        
+                        ?></p>
                             <span>Author : <?php echo $data['author']; ?></span>
                         </div>
                     </div>
