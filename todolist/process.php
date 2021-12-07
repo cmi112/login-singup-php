@@ -9,7 +9,7 @@ $dbname = "crud";
 $conn=mysqli_connect($servername,$username, $password, $dbname);
 if(isset($_POST['submit']))
 {    
-     $firstname = $_POST['task'];
+     $task = $_POST['task'];
    
         //   Form Validation
 if (empty($task)) {
@@ -33,5 +33,3 @@ if (empty($task)) {
 
 
 ?>
-
-<!-- Check the connection to DB -->
