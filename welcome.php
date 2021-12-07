@@ -48,6 +48,7 @@ if($_GET["name"]=="todo"){
 if($_GET["name"]=="location"){
     include("./phpcrud/index.php");
    
+   
 
 }
 if($_GET["name"]=="posts"){

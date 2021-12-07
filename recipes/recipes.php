@@ -43,7 +43,7 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
 
 <!-- Hero Section Start -->
 
-<div class="hero-section">
+<div class="hero-section text-center">
 <h1>Welcome to Recipes World !</h1>
 </div>
 

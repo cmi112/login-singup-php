@@ -1,18 +1,18 @@
-<?php require_once './phpcrud/process.php';
+<?php 
+    require_once './process.php';
     require_once './header.php';
    
-    ?>
-
-    <?php
+?>
+<?php
     if(isset($_SESSION['message'])):?>
-    <div class="alert alert-<?=$_SESSION['msg_type']?>">
+      <div class="alert alert-<?=$_SESSION['msg_type']?>">
 
 
     <?php
     echo $_SESSION['message'];
     unset($_SESSION['message']);
     ?>
-        </div>
+      </div>
         <?php endif?>
 <!-- Hero Section Start -->
 <div class="hero-section text-center">
